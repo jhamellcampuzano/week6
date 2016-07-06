@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0; padding:0; box-sizing:border-box;}
+body{width:100%; height:100%; font-family:"Calibri"; font-size:1em; color:black; padding:50px;}
+ul,li{list-style:none;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+img,fieldset{border:none; vertical-align:middle;}
+input, select, textarea{padding:15px; margin-bottom:20px; width:400px; font-family:"Calibri"; font-size:1em;}
+input[type="submit"]{width:100px; height:45px; background-color:#c00; color:white; border:1px solid #333; padding:0;}
+input[type="button"]{width:100px; height:45px; font-size:.9em; padding:0;}
+input::-ms-clear{display:none;}
+
+#image_form{ width:400px; float:left; margin-right:50px;}
+#image_box{
+	width:100%; height:300px; margin-bottom:20px; background-color:#eee; border:1px solid #ccc; text-align:center; line-height:300px; color:#999; font-size:3em; position:relative;
+	background-size:cover;
+	background-position:center;
+	}
+#image_box.hover{background-color:#0c0; color:white;}
+#image_box img{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);}
+
+#image_list{width:1050px; float:left;}
+#image_list h1{margin-bottom:20px; font-size:3em;}
+#image_list li{margin-bottom:50px; width:240px; padding:20px; float:left; margin-right:20px; position:relative;}
+button.delete{position:absolute; top:20px; right:20px; width:30px; height:30px; background-color:#ccc; color:#333; border:1px solid #999; border-radius:100%;}
+#image_list .image_wrap{width:200px; height:200px; border-radius:100%; overflow:hidden; position:relative;}
+#image_list .image_wrap img{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); min-height:200px; min-width:200px; max-height:300px; max-width:300px;}
+#image_list .image_wrap img:hover{opacity:.8; cursor:pointer;}
+
+/**** custom ****/
+#image_box:not(.drop):before {
+	content:"Drop image here";
+}
+#image_box:not(.drop).over{
+	background-color:#b6cd34;
+}
+#image_box:not(.drop).over:before {
+	content:"Please Drop";
+	color:white;
+}
+#image_box:not(.drop).wrong{
+	background:#e74c3c;
+}
+#image_box:not(.drop).wrong:before {
+	content:"Wrong Image!";
+	color:white;
+}
+
+.image:before {
+	content:"Please upload image.";
+	color:red;
+	font-weight:bold;
+}
+.title:before {
+	content:"Title is minimum 10, maximum 30.";
+	color:red;
+	font-weight:bold;
+}
+.name:before {
+	content:"Name is minimum 3, maximum 10.";
+	color:red;
+	font-weight:bold;
+}
+.email:before {
+	content:"Please Email pattern.";
+	color:red;
+	font-weight:bold;
+}
+.desc:before {
+	content:"Title is minimum 30.";
+	color:red;
+	font-weight:bold;
+}
+.hide { display:none; }
+
+/*.layer {
+	width:100%;
+	height:100%;
+	position:fixed;
+	z-index:1000;
+	background:rgba(0,0,0,.8);
+	left:0;
+	top:0;
+}
+.modal {
+	text-align:center;
+	width:150px;
+	height:150px;
+	background:white;
+	position:fixed;
+	left:50%;
+	top:50%;
+	margin-left:-75px;
+	margin-top:-75px;
+}*/

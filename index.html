@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Client Side Photo Gallary</title>
+<link rel="stylesheet" type="text/css" href="css.css">
+<link rel="stylesheet" type="text/css" href="jquery/css/jquery-ui.css">
+</head>
+
+<body>
+<form method="post" action="#" id="image_form">
+	<fieldset>
+    	<h1 id="image_box"><button type="button" class="hide delete">X</button></h1>
+        <div class="hide"><input type="file" id="file" name="file" accept="image/*"></div>
+        <p><input type="text" name="title" id="title" value="" placeholder="Title, 10-30 chars"></p>
+        <p><input type="text" name="name" id="name" value="" placeholder="Name 3-10 chars"></p>
+        <p><input type="text" name="email" id="email" value="" placeholder="Email Address"></p>
+        <p><textarea name="description" id="description" placeholder="Description, over 30 chars" cols="0" rows="10"></textarea></p>
+        <input type="submit" value="Submit">
+    </fieldset>
+</form>
+
+<div id="image_list">
+	<h1>IMAGE LIST</h1>
+    <ul></ul>
+</div>
+
+<script type="text/javascript" src="jquery/js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="jquery/js/jquery-ui-1.9.2.custom.js"></script>
+<script type="text/javascript" src="js.js"></script>
+
+</body>
+</html>
